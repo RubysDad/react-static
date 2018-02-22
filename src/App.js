@@ -2,41 +2,30 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Navbar, Nav, NavItem, MenuItem, NavDropdown } from 'react-bootstrap';
+import { Header } from "./components/Header";
+import { Home } from "./components/Home";
 
 
 class App extends Component {
   render() {
+    var user = {
+      name: "Tabitha",
+      hobbies: ["Triathlon", "Figure Skating"]
+    };
     return (
-      <div className="App">
-        <Navbar>
-      		<Navbar.Header>
-      			<Navbar.Brand>
-      				<a href="#home">Mulberry Cloud</a>
-      			</Navbar.Brand>
-      		</Navbar.Header>
-      		<Nav>
-      			<NavItem eventKey={1} href="#">
-      				Home
-      			</NavItem>
-      			<NavItem eventKey={2} href="#">
-      				About
-      			</NavItem>
-      			<NavDropdown eventKey={3} title="Services" id="basic-nav-dropdown">
-      				<MenuItem eventKey={3.1}>Action</MenuItem>
-      				<MenuItem eventKey={3.2}>Another action</MenuItem>
-      				<MenuItem eventKey={3.3}>Something else here</MenuItem>
-      				<MenuItem divider />
-      				<MenuItem eventKey={3.4}>Separated link</MenuItem>
-      			</NavDropdown>
-      		</Nav>
-      	</Navbar>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome Mulberry Cloud</h1>
-        </header>
-        <p className="App-intro">
-          Modern day solutions
-        </p>
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-10 col-xs-offset-1">
+            <Header/>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-xs-10 col-xs-offset-1">
+            <Home name={"Mark"} age={25} user={user}>
+              <p>React and Rails</p>
+            </Home>
+          </div>
+        </div>
       </div>
     );
   }
