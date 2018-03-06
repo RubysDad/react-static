@@ -8,10 +8,6 @@ import { Home } from "./components/Home";
 
 class App extends Component {
   render() {
-    var user = {
-      name: "Tabitha",
-      hobbies: ["Triathlon", "Figure Skating"]
-    };
     return (
       <div className="container">
         <div className="row">
@@ -21,9 +17,7 @@ class App extends Component {
         </div>
         <div className="row">
           <div className="col-xs-10 col-xs-offset-1">
-            <Home name={"Mark"} age={25} user={user}>
-              <p>React and Rails</p>
-            </Home>
+            <Home name={"Mark"} initialAge={26} />
           </div>
         </div>
       </div>
