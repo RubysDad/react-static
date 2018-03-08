@@ -1,3 +1,28 @@
+React fundamentals
+
+Component lifecycle:
+
+componentWillMount() = Immediately before initial rendering
+
+componentDidMount() = Immediately after initial rendering
+
+componentWillReceiveProps = When component receives new props
+
+shouldComponentUpdate = Before rendering, after receiving new props or state
+
+componentWillUpdate = Before rendering, after receiving new props or state (gets executed after shouldComponentUpdate returned true)
+
+componentDidUpdate = After component's updates are flushed to DOM (executed after re-rendering the component)
+
+componentWillUnmount = Immediately before removing component from DOM
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
